@@ -3,8 +3,22 @@ class TeamsController < ApplicationController
 
   # GET /teams
   # GET /teams.json
+
+  def generate_teams
+    @classmates = ["Jaqueta", "Stephen", "Mike C.", "Nidhi", "Odette", "Mike J.", "Rayhan", "Scott", "Tammy", "Todd", "Andrew", "Oz"]
+    @teams = []
+    until @classmates.length <= 3
+        @team = @classmates.sample(2)
+        @teams.push(@team)
+        @classmates.delete(@team[0])
+        @classmates.delete(@team[1])
+    end
+    @teams.push(@classmates)
+    return @teams
+  end
+
   def index
-    @teams = Team.all
+    @teams = generate_teams
   end
 
   # GET /teams/1
@@ -71,4 +85,5 @@ class TeamsController < ApplicationController
     def team_params
       params.require(:team).permit(:student_id, :is_leader, :team_id)
     end
+
 end
