@@ -1,46 +1,21 @@
 #http://codebunk.com/b/-JGA0KXEUciU2LVpX_XA
 
-def generate_teams  
-    i = 1
-    classmates = ["Odd", "Jaqueta", "Stephen", "Mike C.", "Nidhi", "Odette", "Mike J.", "Rayhan", "Scott", "Tammy", "Todd", "Andrew", "Oz"]
+def generate_teams
+    classmates = ["Jaqueta", "Stephen", "Mike C.", "Nidhi", "Odette", "Mike J.", "Rayhan", "Scott", "Tammy", "Todd", "Andrew", "Oz"]
     assigned_teams = []
     until classmates.length <= 3
         team = classmates.sample(2)
         assigned_teams.push(team)
         classmates.delete(team[0])
         classmates.delete(team[1])
-        i = i +1
     end
     assigned_teams.push(classmates)
-    assigned_teams.push()
-    #puts classmates
     return assigned_teams
 end
 
 generate_teams.each do |team|
     puts "team: #{team}"
 end
-
-
-=begin
-total_unpaired_students = classmates.count
-
-puts assigned_teams
-
-puts classmates.length
-
-classmates.delete(team1[0])
-classmates.delete(team1[1])
-=end
-
-
-
-#puts classmates.length
-
-#puts classmates
-
-#puts "The first assigned student is #{assigned_teams.first}."
-  
 
 #begin emails
  #Jaqueta Flowers <jaquetaflowers@gmail.com>,
