@@ -2,9 +2,11 @@
 
 <div>
   <table>
-    <% @final_teams.each do |team| %>
+    <% @final_teams.each_with_index do |team, index| %>
       <tr>
-        <td><%= team[0] %> , <%= team[1] %></td>
+<!-- &nbsp; below is to create an extra space, since extra white space is ignored -->
+        <td>Team <%= index + 1 %>: &nbsp;</td>
+        <td><%= team.join(", ") %></td>
       </tr>
     <% end %>
   </table>
