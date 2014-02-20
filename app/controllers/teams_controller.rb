@@ -19,6 +19,10 @@ class TeamsController < ApplicationController
 
   def index
     @final_teams = generate_teams
+    @final_teams.each do |team|
+      #I'm pretty sure this syntax is close, but it's not adding to db yet
+      Team.new(:team_members => "team")
+    end
   end
 
   # GET /teams/1
@@ -28,7 +32,6 @@ class TeamsController < ApplicationController
 
   # GET /teams/new
   def new
-    @team = Team.new
   end
 
   # GET /teams/1/edit
