@@ -14,19 +14,16 @@ class TeamsController < ApplicationController
         @classmates.delete(@team[1])
     end
     @teams.push(@classmates)
-    return @teams
   end
 
   def index
     @final_teams = generate_teams
 
-
     @final_teams.each do |team|
-      #I'm pretty sure this syntax is close, but it's not adding to db yet
-      Team.new(:team_members => team[0])
-
-
+      team_as_string = team.join(", ")
+      Team.create(team_members: team_as_string)
     end
+
   end
 
   # GET /teams/1
