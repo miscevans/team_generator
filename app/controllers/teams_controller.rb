@@ -17,6 +17,8 @@ class TeamsController < ApplicationController
   end
 
   def index
+    Team.destroy_all
+
     @final_teams = generate_teams
 
     @final_teams.each do |team|
