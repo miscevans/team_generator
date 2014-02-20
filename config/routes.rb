@@ -3,6 +3,8 @@ TeamGenerator::Application.routes.draw do
   
   get "/teams/num_teams"
 
+  post "/teams/team_results"
+
   resources :teams
 
   resources :students

@@ -16,6 +16,15 @@ class TeamsController < ApplicationController
     @teams.push(@classmates)
   end
 
+  def num_teams
+  end
+
+  def team_results
+  
+
+  end
+
+
   def index
     Team.destroy_all
 
