@@ -5,7 +5,7 @@ class TeamsController < ApplicationController
   # GET /teams.json
 
   def generate_teams
-    @classmates = ["Missing", "Jaqueta", "Stephen", "Mike C.", "Nidhi", "Odette", "Mike J.", "Rayhan", "Scott", "Tammy", "Todd", "Andrew", "Oz"]
+    @classmates = ["Sam", "Jaqueta", "Stephen", "Mike C.", "Nidhi", "Odette", "Mike J.", "Rayhan", "Scott", "Tammy", "Todd", "Andrew", "Oz"]
     @teams = []
     until @classmates.length <= 3
         @team = @classmates.sample(2)

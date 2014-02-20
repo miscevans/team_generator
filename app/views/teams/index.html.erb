@@ -1,4 +1,4 @@
-<h1>Listing teams</h1>
+<h1><u>Team List</u></h1>
 
 <div>
   <table>
@@ -6,7 +6,7 @@
       <tr>
 <!-- &nbsp; below is to create an extra space, since extra white space is ignored -->
         <td>Team <%= index + 1 %>: &nbsp;</td>
-        <td><%= team.join(", ") %></td>
+        <td><font color=red><%= team.join(", ") %></font></td>
       </tr>
     <% end %>
   </table>
