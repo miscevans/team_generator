@@ -18,7 +18,7 @@ class TeamsController < ApplicationController
   end
 
   def index
-    @teams = generate_teams
+    @final_teams = generate_teams
   end
 
   # GET /teams/1

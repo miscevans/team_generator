@@ -17,6 +17,10 @@ generate_teams.each do |team|
     puts "team: #{team}"
 end
 
+
+# :team_members = Team.new
+
+
 #begin emails
  #Jaqueta Flowers <jaquetaflowers@gmail.com>,
  #Joe Schmoe <benbolio21@gmail.com>,
