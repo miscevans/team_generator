@@ -1,21 +1,29 @@
-<h1><u>Team List</u></h1>
+<div id="bg_team">
 
-<div>
-  <table>
+  <table id="team_list">
+    <tr>
+      <th colspan="2">Current Team List</th>
+    </tr>
+    <tr>
+      <td height="20px"><!-- spacer --></td>
+    </tr> 
     <% @final_teams.each_with_index do |team, index| %>
       <tr>
-<!-- &nbsp; below is to create an extra space, since extra white space is ignored -->
-        <td>Team <%= index + 1 %>: &nbsp;</td>
-        <td><font color=red><%= team.join(", ") %></font></td>
+        <td text-align="right">Team <%= index + 1 %>: </td>
+        <td><%= team.join(", ") %></td>
       </tr>
     <% end %>
+    <tr>
+      <td height="20px"><!-- spacer --></td>
+    </tr> 
+    <tr>
+      <td align="center" colspan="2">
+        <div id="shuffle">
+        <%= link_to 'Shuffle Teams', teams_path %>
+        </div>
+      </td>
+    </tr>
   </table>
 
 </div>
 
-<!--
-@final_teams = [ [Nidhi, Scott, MJ] index=0, [Sam, Oz] index=1 ]
-
-Team 1: Nidhi, Scott, MJ
-Team 2: Sam, OZ
--->

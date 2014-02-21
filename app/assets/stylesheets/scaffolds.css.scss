@@ -1,23 +1,27 @@
 #grad1 {
 height:800px;
-background: url('team.gif') right top no-repeat , -webkit-linear-gradient(white, white #1A1A1A); /* For Safari */
-background: url('team.gif') right top no-repeat ,-o-linear-gradient(white, #1A1A1A); /* For Opera 11.1 to 12.0 */
-background: url('team.gif') right top no-repeat ,-moz-linear-gradient(white, #1A1A1A); /* For Firefox 3.6 to 15 */
-background: url('team.gif') right top no-repeat ,linear-gradient(white, #1A1A1A); /* Standard syntax (must be last) */
+background: right top no-repeat , -webkit-linear-gradient(white, white #1A1A1A); /* For Safari */
+background: right top no-repeat ,-o-linear-gradient(white, #1A1A1A); /* For Opera 11.1 to 12.0 */
+background: right top no-repeat ,-moz-linear-gradient(white, #1A1A1A); /* For Firefox 3.6 to 15 */
+background: right top no-repeat ,linear-gradient(white, #1A1A1A); /* Standard syntax (must be last) */
+}
+
+#bg_team {
+  background: url('team.png');
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
 }
 
 body {
-  background: #fff;
-  color: red;
+  color: #DDDDDD;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 30px;
   font-weight:900;
   line-height: 18px;
 }
 
 p, ol, ul, td {
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 30px;
   line-height: 45px;
 }
 
@@ -61,18 +65,63 @@ div {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
-  }
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
+}
+
+h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+#team_list {
+  width: 520px;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+  background-color: black;
+  border-style: solid;
+  font-size: 24px;
+ /* Fallback for web browsers that doesn't support RGBa */
+  background: rgb(0, 0, 0) transparent;
+ /* RGBa with 0.6 opacity */
+  background: rgba(0, 0, 0, 0.8);
+ /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+th {
+  color:#DDDDDD;
+  padding: 18px;
+  font-size: 32px;
+  border-style: solid 1px;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgb(0, 0, 0) transparent;
+ /* RGBa with 0.6 opacity */
+  background: rgba(0, 0, 0, 0.4);
+ /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+#shuffle a{
+  text-align: center;
+  text-decoration: none;
+  color: #DDDDDD;
+  background-color: #00350E;
+  padding: 14px;
+  border-radius: 12px;
 }
