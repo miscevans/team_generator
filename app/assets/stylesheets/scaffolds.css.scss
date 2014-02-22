@@ -1,13 +1,4 @@
-#grad1 {
-height:800px;
-background: right top no-repeat , -webkit-linear-gradient(white, white #1A1A1A); /* For Safari */
-background: right top no-repeat ,-o-linear-gradient(white, #1A1A1A); /* For Opera 11.1 to 12.0 */
-background: right top no-repeat ,-moz-linear-gradient(white, #1A1A1A); /* For Firefox 3.6 to 15 */
-background: right top no-repeat ,linear-gradient(white, #1A1A1A); /* Standard syntax (must be last) */
-}
-
 #bg_team {
-  background: url('team.png');
   margin-left: auto;
   margin-right: auto;
   width: 500px;
@@ -18,6 +9,7 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-weight:900;
   line-height: 18px;
+  background: url('bg.jpg');
 }
 
 p, ol, ul, td {
@@ -46,10 +38,6 @@ div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
-}
-
-#notice {
-  color: green;
 }
 
 .field_with_errors {
