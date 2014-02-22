@@ -1,5 +1,5 @@
 TeamGenerator::Application.routes.draw do
-  root "teams#index"
+  root "students#index"
   
   get "/teams/num_teams"
 

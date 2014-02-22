@@ -1,11 +1,10 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /teams
   # GET /teams.json
 
   def generate_teams
-    classmates = ["Sam", "Jaqueta", "Stephen", "Mike C.", "Nidhi", "Odette", "Mike J.", "Rayhan", "Scott", "Tammy", "Todd", "Andrew", "Oz"]
     teams = []
     team_size = 2;
     #keep assigning teams until there is one more than the team size remaining
@@ -33,16 +32,16 @@ class TeamsController < ApplicationController
 
   def index
     #empty team table so it's ready to populate wtih new team
-    Team.destroy_all
-    #generate teams and assign to instance variable to use in view    
-    @final_teams = generate_teams
     
-    @final_teams.each do |team|
+    #generate teams and assign to instance variable to use in view    
+    #@final_teams = generate_teams
+    
+    #@final_teams.each do |team|
     #convert each individual team array into a single comma separated string
-      team_as_string = team.join(", ")
+      #team_as_string = team.join(", ")
     #create a new team entry and add the team into team_members column
-      Team.create(team_members: team_as_string)
-    end
+      #Team.create(team_members: team_as_string)
+    #end
   end
 
   # GET /teams/1

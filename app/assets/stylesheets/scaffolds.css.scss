@@ -9,7 +9,11 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   font-weight:900;
   line-height: 18px;
-  background: url('bg.jpg');
+  background: url('bg.jpg')
+}
+
+h1 {
+  font-size: 24px;
 }
 
 p, ol, ul, td {
@@ -71,15 +75,15 @@ ul li {
   list-style: square;
 }
 
-#team_list {
-  width: 520px;
+.alpha_table{
+  width:640px;
   margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
-  padding: 30px;
+  padding: 10px 12px;
   background-color: black;
   border-style: solid;
-  font-size: 24px;
+  font-size: 16px;
  /* Fallback for web browsers that doesn't support RGBa */
   background: rgb(0, 0, 0) transparent;
  /* RGBa with 0.6 opacity */
@@ -92,8 +96,8 @@ ul li {
 
 th {
   color:#DDDDDD;
-  padding: 18px;
-  font-size: 32px;
+  padding: 12px;
+  font-size: 24px;
   border-style: solid 1px;
   /* Fallback for web browsers that doesn't support RGBa */
   background: rgb(0, 0, 0) transparent;
@@ -103,6 +107,28 @@ th {
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
   /* For IE 8*/
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+td {
+  padding: 4px;
+}
+
+tr:nth-of-type(even) {
+  background-color: gray;
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgb(0, 0, 0) transparent;
+ /* RGBa with 0.6 opacity */
+  background: rgba(0, 0, 0, 0.4);
+ /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+.link a {
+  font-size: 16px;
+  color: gray;
+  text-decoration: none;
 }
 
 #shuffle a{
