@@ -1,11 +1,11 @@
-#bg_team {
+.centered {
   margin-left: auto;
   margin-right: auto;
   width: 500px;
 }
 
 body {
-  color: #DDDDDD;
+  color: #FFFDD1;
   font-family: Helvetica, Arial, sans-serif;
   font-weight:900;
   line-height: 18px;
@@ -81,44 +81,41 @@ ul li {
   margin-left: auto;
   margin-right: auto;
   padding: 10px 12px;
-  background-color: black;
   border-style: solid;
   font-size: 16px;
  /* Fallback for web browsers that doesn't support RGBa */
   background: rgb(0, 0, 0) transparent;
  /* RGBa with 0.6 opacity */
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
  /* For IE 5.5 - 7*/
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
   /* For IE 8*/
   -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
 
-th {
-  color:#DDDDDD;
-  padding: 12px;
-  font-size: 24px;
-  border-style: solid 1px;
-  /* Fallback for web browsers that doesn't support RGBa */
-  background: rgb(0, 0, 0) transparent;
- /* RGBa with 0.6 opacity */
-  background: rgba(0, 0, 0, 0.4);
- /* For IE 5.5 - 7*/
-  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-  /* For IE 8*/
-  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-}
 
 td {
   padding: 4px;
 }
 
 tr:nth-of-type(even) {
-  background-color: gray;
+
   /* Fallback for web browsers that doesn't support RGBa */
   background: rgb(0, 0, 0) transparent;
  /* RGBa with 0.6 opacity */
   background: rgba(0, 0, 0, 0.4);
+ /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
+
+tr:nth-of-type(odd) {
+
+  /* Fallback for web browsers that doesn't support RGBa */
+  background: rgb(0, 0, 0) transparent;
+ /* RGBa with 0.6 opacity */
+  background: rgba(0, 0, 0, 0.6);
  /* For IE 5.5 - 7*/
   filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
   /* For IE 8*/
@@ -127,15 +124,15 @@ tr:nth-of-type(even) {
 
 .link a {
   font-size: 16px;
-  color: gray;
+  color: #DDDDDD;
   text-decoration: none;
 }
 
-#shuffle a{
+.green_btn a{
   text-align: center;
   text-decoration: none;
-  color: #DDDDDD;
-  background-color: #00350E;
+  color: white;
+  background-color: #078200;
   padding: 14px;
   border-radius: 12px;
 }

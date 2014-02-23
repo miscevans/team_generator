@@ -2,12 +2,12 @@
 
   <table class="alpha_table">
     <tr>
-      <td align="center" colspan="5"><h1>Current Team List</h1></td>
+      <td align="center" colspan="5"><h1>New Team List</h1></td>
     </tr>
-    <% @assigned_teams.each_with_index do |team, index| %>
+    <% @teams.each_with_index do |students, index| %>
       <tr>
         <td class="left_label">Team <%= index + 1 %>: </td>
-        <td><%= team %></td>
+        <td><%= students.join(", ") %></td>
       </tr>
     <% end %>
     <tr>

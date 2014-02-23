@@ -1,40 +1,26 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
   
+  include TeamsHelper
+
   # GET /teams
   # GET /teams.json
 
-  def generate_teams
-    teams = []
-    team_size = 2;
-    #keep assigning teams until there is one more than the team size remaining
-    until classmates.length <= team_size + 1
-    #randomly sample elements from classmates array based on team size abd assign to team
-    #sampled objects are returned as an array
-        team = classmates.sample(team_size)
-    #push team to teams array
-        teams.push(team)
-    #remove assigned team from classmates array
-        classmates.delete(team[0])
-        classmates.delete(team[1])
-    end
-    teams.push(classmates)
+  def make_teams
+  #pass team size to generate teams method
   end
 
-  def num_teams
-  end
-
-  def team_results
-  
-
+  def assigned_teams
+    @teams = generate_teams
   end
 
 
   def index
-    #empty team table so it's ready to populate wtih new team
-    
     #generate teams and assign to instance variable to use in view    
-    #@final_teams = generate_teams
+    @teams = generate_teams
+
+    #modify to reference teams from database
+
     
     #@final_teams.each do |team|
     #convert each individual team array into a single comma separated string

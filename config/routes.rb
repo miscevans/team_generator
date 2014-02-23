@@ -1,15 +1,14 @@
 TeamGenerator::Application.routes.draw do
   root "students#index"
   
-  get "/teams/num_teams"
+  get "/teams/make_teams"
 
-  post "/teams/team_results"
+  get "/teams/assigned_teams"
 
   resources :teams
 
   resources :students
 
-  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
