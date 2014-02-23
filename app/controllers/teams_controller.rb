@@ -17,7 +17,7 @@ class TeamsController < ApplicationController
 
   def index
     #generate teams and assign to instance variable to use in view    
-    @teams = generate_teams
+    #@teams = generate_teams
 
     #modify to reference teams from database
 

@@ -2,18 +2,21 @@
 
   <table class="alpha_table">
     <tr>
-      <td align="center" colspan="5"><h1>New Team List</h1></td>
+      <td align="center" colspan="2"><h1>New Team List</h1></td>
     </tr>
     <% @teams.each_with_index do |students, index| %>
       <tr>
-        <td class="left_label">Team <%= index + 1 %>: </td>
-        <td><%= students.join(", ") %></td>
+        <td class="team_label">Team <%= index + 1 %>: </td>
+        <td class="team_list"> <%= students.join(", ") %></td>
       </tr>
     <% end %>
     <tr>
-      <td height="80" align="center" colspan="2">
-        <div class="green_btn">
+      <td height="80" colspan="2">
+        <div class="green_btn" id="teams_btn">
         <a href="/teams/make_teams">Make New Teams</a>
+        </div>
+        <div class="green_btn" id="save_btn">
+        <a href="/teams/make_teams">Save Teams</a>
         </div>
       </td>
     </tr>

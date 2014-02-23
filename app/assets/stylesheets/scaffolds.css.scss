@@ -136,3 +136,23 @@ tr:nth-of-type(odd) {
   padding: 14px;
   border-radius: 12px;
 }
+
+.team_label{
+  color: #AAECFA;
+  padding: none;
+  text-align: center;
+}
+
+.team_list{
+  padding-left: 40px
+}
+
+#teams_btn{
+  float: left;
+  padding-left: 120px;
+}
+
+#save_btn{
+  float: right;
+  padding-right: 120px;
+}
