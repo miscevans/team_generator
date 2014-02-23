@@ -9,7 +9,7 @@ module TeamsHelper
     end
     teams = []
     #take team size input, convert to integer and assign to team_size variable
-    team_size = (params[:num]).to_i
+    team_size = (params[:num]).to_i/classmates.length
     #keep assigning teams until there is one more than the team size remaining
     until unassigned_students.length <= team_size + 1
     #randomly sample from unassigned_students array based on team size and assign to team
