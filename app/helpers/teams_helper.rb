@@ -8,11 +8,16 @@ module TeamsHelper
       unassigned_students.push(student.name)
     end
     teams = []
-    #take form input for number of teams and convert to integer
-    num_teams = (params[:num]).to_i
+    #take form input for number of teams and convert to integer, default to 6 if blank
+    if (params[:num]).to_i < 1
+      num_teams = 6
+    else
+      num_teams = (params[:num]).to_i
+    end
     #divide total unassigned_students by num_teams and assign to team_size
-    team_size = (unassigned_students.length) / (num_teams)
+    team_size = unassigned_students.length / num_teams
     #keep assigning teams until there is one more than the team size remaining
+
     until unassigned_students.length <= team_size + 1
     #randomly sample from unassigned_students array based on team size and assign to team
     #sampled objects are returned as an array
@@ -26,6 +31,17 @@ module TeamsHelper
     end
     #pass remaining unassigned_students into teams array
     teams.push(unassigned_students)
+
+# final output results in the following array...
+
+#    teams = [ ["Todd", "Oz"],
+#              ["Scott", "Jaqueta"],
+#              ["Odette", "Tammy"]
+#              ["Mike C.", "Andrew"]
+#              ["Nidhi", "Rayhan"]
+#              ["Mike J.", "Samuel", "Stephen"]
+#            ]
+
   end
 
 end

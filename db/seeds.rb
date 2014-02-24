@@ -6,7 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-=begin 
+=begin
+
 
 Student.create(name: "Andrew", email: "dawizkid404@gmail.com")
 Student.create(name: "Jaqueta", email: "jaquetaflowers@gmail.com")
@@ -23,3 +24,5 @@ Student.create(name: "Tammy", email: "me@tammyllc.com")
 Student.create(name: "Todd", email: "tbrunsvold@gmail.com")
 
 =end
+
+

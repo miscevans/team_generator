@@ -1,25 +1,26 @@
-<div>
-
   <table class="alpha_table">
     <tr>
       <td align="center" colspan="2"><h1>New Team List</h1></td>
     </tr>
     <% @teams.each_with_index do |students, index| %>
       <tr>
-        <td class="team_label">Team <%= index + 1 %>: </td>
+        <td width="120" class="team_label">Team <%= index + 1 %>: </td>
         <td class="team_list"> <%= students.join(", ") %></td>
       </tr>
     <% end %>
     <tr>
       <td height="80" colspan="2">
-        <div class="green_btn" id="teams_btn">
-        <a href="/teams/make_teams">Make New Teams</a>
+        <div class="green_btn" id="new_btn">
+        <a href="/teams/make_teams">New Team Size</a>
+        </div>
+        <div class="green_btn" id="shuffle">
+        <a href="/teams/assigned_teams">Shuffle Teams</a>
         </div>
         <div class="green_btn" id="save_btn">
-        <a href="/teams/make_teams">Save Teams</a>
+        <a href="/teams/make_teams"
+          method="get" num=<%= @teams.length %> >
+          Save Teams</a>
         </div>
       </td>
     </tr>
   </table>
-
-</div>

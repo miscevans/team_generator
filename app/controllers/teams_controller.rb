@@ -1,27 +1,26 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
-  
+
   include TeamsHelper
 
   # GET /teams
   # GET /teams.json
 
   def make_teams
-  #pass team size to generate teams method
+    #pass team size to generate teams method
   end
 
   def assigned_teams
     @teams = generate_teams
   end
 
-
   def index
-    #generate teams and assign to instance variable to use in view    
+    #generate teams and assign to instance variable to use in view
     #@teams = generate_teams
 
     #modify to reference teams from database
 
-    
+
     #@final_teams.each do |team|
     #convert each individual team array into a single comma separated string
       #team_as_string = team.join(", ")

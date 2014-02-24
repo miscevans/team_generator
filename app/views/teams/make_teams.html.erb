@@ -2,7 +2,8 @@
   <table class="alpha_table">
   	<tr>
   	  <td>
-		<%= form_tag("/teams/assigned_teams", method: "get") do %> 	<%= label_tag(:num, "how many teams?") %>
+		<%= form_tag("/teams/assigned_teams", method: "get") do %>
+    <%= label_tag(:num, "how many teams?") %>
 		  <%= text_field_tag(:num) %>
 		  <%= submit_tag("Go") %>
 		<% end %>

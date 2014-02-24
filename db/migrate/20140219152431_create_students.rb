@@ -4,6 +4,7 @@ class CreateStudents < ActiveRecord::Migration
       t.string :name
       t.string :email
       t.string :github_username
+      t.integer :is_leader
       t.integer :team_id
 
       t.timestamps

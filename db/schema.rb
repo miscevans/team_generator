@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20140219152644) do
     t.string   "name"
     t.string   "email"
     t.string   "github_username"
+    t.integer  "is_leader"
     t.integer  "team_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -24,7 +25,6 @@ ActiveRecord::Schema.define(version: 20140219152644) do
 
   create_table "teams", force: true do |t|
     t.integer  "student_id"
-    t.integer  "is_leader"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
