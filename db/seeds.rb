@@ -8,7 +8,6 @@
 
 =begin
 
-
 Student.create(name: "Andrew", email: "dawizkid404@gmail.com")
 Student.create(name: "Jaqueta", email: "jaquetaflowers@gmail.com")
 Student.create(name: "Mike C.", email: "mike_comm2000@yahoo.com")

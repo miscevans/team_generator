@@ -1,13 +1,16 @@
+<div class="vert-center">
   <table class="alpha_table">
     <tr>
       <td align="center" colspan="2"><h1>New Team List</h1></td>
     </tr>
-    <% @teams.each_with_index do |students, index| %>
+
+    <% @teams.each_with_index do |team, index| %>
       <tr>
         <td width="120" class="team_label">Team <%= index + 1 %>: </td>
-        <td class="team_list"> <%= students.join(", ") %></td>
+        <td class="team_list"> <%= team.join(", ") %></td>
       </tr>
     <% end %>
+
     <tr>
       <td height="80" colspan="2">
         <div class="green_btn" id="new_btn">
@@ -24,3 +27,4 @@
       </td>
     </tr>
   </table>
+</div>

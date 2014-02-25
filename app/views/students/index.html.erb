@@ -1,28 +1,26 @@
-
-
-<table class="alpha_table">
-  <tr>
-    <td align="center" colspan="5"><h1>Tech Talent South Students</h1></td>
-  </tr>
-  <% @classmates.each_with_index do |student, index| %>
+<div class="vert-center">
+  <table class="alpha_table">
     <tr>
-      <td>Student <%= index + 1 %>: </td>
-      <td><%= student.name %></td>
-      <td><%= student.email %></td>
-      <td class="link"><%= link_to 'Edit', edit_student_path(student) %></td>
-      <td class="link"><%= link_to 'Remove', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td align="center" colspan="5"><h1>Tech Talent South Students</h1></td>
     </tr>
-    <% end %>
-    <tr>
-      <td height="80" align="center" colspan="3">
-        <div class="green_btn">
-        <%= link_to 'Team Assignments', teams_path %>
-        </div>
-      </td>
-      <td align="center" colspan="2" class="link"><%= link_to 'New Student', new_student_path %></td>
-    </tr>
-</table>
 
-<br>
+    <% @classmates.each_with_index do |student, index| %>
+      <tr>
+        <td class="left_label">Student <%= index + 1 %>: </td>
+        <td><%= student.name %></td>
+        <td><%= student.email %></td>
+        <td class="link"><%= link_to 'Edit', edit_student_path(student) %></td>
+        <td class="link"><%= link_to 'Remove', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
 
-
+      <tr>
+        <td height="80" align="center" colspan="3">
+          <div class="green_btn">
+          <%= link_to 'Team Assignments', teams_path %>
+          </div>
+        </td>
+        <td align="center" colspan="2" class="link"><%= link_to 'New Student', new_student_path %></td>
+      </tr>
+  </table>
+</div>

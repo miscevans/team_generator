@@ -1,10 +1,7 @@
-
-<%= form_tag("/teams/team_results", method: "post") do %>
-  
-  <%= label_tag(:num, "how many teams?") %>
-
-  <%= text_field_tag(:num) %>
-  
-  <%= submit_tag("Go") %>
-
-<% end %>
+<div class="vert-center">
+  <%= form_tag("/teams/team_results", method: "post") do %>
+    <%= label_tag(:num, "how many teams?") %>
+    <%= text_field_tag(:num) %>
+    <%= submit_tag("Go") %>
+  <% end %>
+</div>
