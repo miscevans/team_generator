@@ -11,22 +11,12 @@ class TeamsController < ApplicationController
   end
 
   def assigned_teams
+    @num_teams = (params[:num])
     @teams = generate_teams
   end
 
   def index
-    #generate teams and assign to instance variable to use in view
-    #@teams = generate_teams
-
-    #modify to reference teams from database
-
-
-    #@final_teams.each do |team|
-    #convert each individual team array into a single comma separated string
-      #team_as_string = team.join(", ")
-    #create a new team entry and add the team into team_members column
-      #Team.create(team_members: team_as_string)
-    #end
+    #modify to reference teams from database after 'saving'
   end
 
   # GET /teams/1

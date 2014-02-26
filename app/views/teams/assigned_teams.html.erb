@@ -6,7 +6,7 @@
 
     <% @teams.each_with_index do |team, index| %>
       <tr>
-        <td width="120" class="team_label">Team <%= index + 1 %>: </td>
+        <td width="120" class="left_label">Team <%= index + 1 %>: </td>
         <td class="team_list"> <%= team.join(", ") %></td>
       </tr>
     <% end %>
@@ -14,15 +14,14 @@
     <tr>
       <td height="80" colspan="2">
         <div class="green_btn" id="new_btn">
-        <a href="/teams/make_teams">New Team Size</a>
+          <a href="/teams/make_teams">New Team Size</a>
         </div>
         <div class="green_btn" id="shuffle">
-        <a href="/teams/assigned_teams">Shuffle Teams</a>
+        <!-- pass same parameter that was passed from make_teams view -->
+          <%= link_to 'Shuffle Teams', teams_assigned_teams_path(:num=>@num_teams) %>
         </div>
         <div class="green_btn" id="save_btn">
-        <a href="/teams/make_teams"
-          method="get" num=<%= @teams.length %> >
-          Save Teams</a>
+          <a href="/teams/make_teams">Save Teams</a>
         </div>
       </td>
     </tr>
