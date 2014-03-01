@@ -11,7 +11,6 @@ class TeamsController < ApplicationController
   end
 
   def assigned_teams
-    @num_teams = (params[:num])
     @teams = generate_teams
   end
 
