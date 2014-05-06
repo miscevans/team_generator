@@ -1,29 +1,34 @@
 <div class="vert-center">
   <table class="alpha_table">
     <tr>
+    <% if @num_teams != nil %>
       <td align="center" colspan="2"><h1>New Team List</h1></td>
     </tr>
-
-    <% @teams.each_with_index do |team, index| %>
+    <% @teams.each do |id, team| %>
       <tr>
-        <td width="120" class="left_label">Team <%= index + 1 %>: </td>
+        <td width="120" class="left_label">Team <%= id+1 %>: </td>
         <td class="team_list"> <%= team.join(", ") %></td>
       </tr>
     <% end %>
-
     <tr>
       <td height="80" colspan="2">
-        <div class="green_btn" id="new_btn">
-          <a href="/teams/make_teams">New Team Size</a>
+        <div class="green_btn reset_btn">
+          <a href="/teams/make_teams">Reset Teams</a>
         </div>
         <div class="green_btn" id="shuffle">
         <!-- pass same parameter that was passed from make_teams view -->
-          <%= link_to 'Shuffle Teams', teams_assigned_teams_path(:num=>@num_teams) %>
+          <%= link_to 'Shuffle Teams', teams_assigned_teams_path(num: @num_teams) %>
         </div>
         <div class="green_btn" id="save_btn">
-          <a href="/teams/make_teams">Save Teams</a>
+          <%= link_to "Save Teams", teams_path(teams: @teams) %>
         </div>
       </td>
+    <% else %>
+      <td align="center">You must enter 1 or more for number of teams.</td>
+      <td><div class="green_btn reset_btn">
+          <a href="/teams/make_teams">Reset Teams</a>
+        </div></td>
+    <% end %>
     </tr>
   </table>
 </div>

@@ -3,16 +3,23 @@
     <tr>
       <td align="center" colspan="5"><h1>Current Team List</h1></td>
     </tr>
-    <%# @teams.each_with_index do |team, index| %>
+    <tr>
+      <td align="center" colspan="2">* indicates leader</td>
+    </tr>
+    <% @teams_hash.each do |id, team| %>
       <tr>
-        <td class="left_label">Team <%#= index + 1 %>: </td>
-        <td><%#= team %></td>
+        <td class="left_label">Team <%= id+1 %>:  </td>
+        <td> <%= team.join(', ') %>
+        </td>
       </tr>
-    <%# end %>
+    <%end %>
     <tr>
       <td height="80" align="center" colspan="2">
-        <div class="green_btn">
-        <a href="/teams/make_teams">Make New Teams</a>
+        <div class="green_btn current_btn">
+          <a href="/teams/make_teams">Make New Teams</a>
+        </div>
+        <div class="green_btn current_btn">
+          <a href="/">Student List</a>
         </div>
       </td>
     </tr>

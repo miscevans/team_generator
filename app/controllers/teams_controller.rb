@@ -7,15 +7,47 @@ class TeamsController < ApplicationController
   # GET /teams.json
 
   def make_teams
-    #pass team size to generate teams method
+    # pass team size to generate teams method
+
   end
 
   def assigned_teams
-    @teams = generate_teams
+    if params[:num].to_i > 1
+      @teams = generate_teams
+    else
+      @teams = nil
+    end
+    # if already seen and 'Save Teams' selected, 
+    # save each team member team_id 
+    # if params[:save] == "true"
+      # @teams.each_with_index do |team, i|
+      #   team.each do |member|
+      #     puts "Team #{i+1}: #{member}"
+      #     s = Student.where(name: member).first
+      #     s.team_id = i+1
+      #     s.save
+      #   end
+      #   puts "=================="
+      #   Student.update_all(is_leader: nil)
+      #   leader = team.sample
+      #   puts "Team leader is #{leader}"
+      #   leader = Student.where(name: leader).first
+      #   leader.is_leader = 1
+      #   t = Team.new(leader_id: leader.id)
+      #   puts t.leader_id
+      #   puts "=================="
+       
+        # leader = Student.where(name: team[rand(1..2)]).first
+        # leader.class
+        # leader.is_leader = 1
+        # leader.save
+      # end
+    # end
   end
 
   def index
-    #modify to reference teams from database after 'saving'
+    set_teams
+    show_teams
   end
 
   # GET /teams/1

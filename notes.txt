@@ -1,0 +1,3 @@
+controller is misdirected
+	need to change parameter movement
+	currently works if refreshed on assigned teams page
